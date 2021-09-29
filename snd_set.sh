@@ -1,3 +1,9 @@
+# snd_set.sh
+#
+# Script to handle sound device selection with sysctl
+#
+# created: qua 29 set 2021 16:52:18 -03
+
 #list available sound devices
 q=`cat /dev/sndstat | grep -v "Installed" | grep -e ":" | sed "s/default$/*** & ***/"`
 n=`cat /dev/sndstat | grep -v "Installed" | grep -e ":" | wc -l | sed "s/ //g"`
